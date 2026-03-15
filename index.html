@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tanvi Vanani — Data Analyst · Berlin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── NAV ─────────────────────────────────────────── -->
+  <nav id="navbar">
+    <div class="nav-logo"><span class="logo-bracket">[</span>TV<span class="logo-bracket">]</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#education">education</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about"      onclick="closeMobile()">about</a>
+      <a href="#skills"     onclick="closeMobile()">skills</a>
+      <a href="#experience" onclick="closeMobile()">experience</a>
+      <a href="#education"  onclick="closeMobile()">education</a>
+      <a href="#projects"   onclick="closeMobile()">projects</a>
+      <a href="#contact"    onclick="closeMobile()">contact</a>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─────────────────────────────────────────── -->
+  <section id="hero">
+    <canvas id="neuralCanvas"></canvas>
+    <div class="hero-content">
+      <div class="terminal-line">
+        <span class="terminal-prompt">~/portfolio $</span>
+        <span class="terminal-cmd" id="termCmd"></span>
+        <span class="cursor">▋</span>
+      </div>
+      <h1 class="hero-name">Tanvi<br><em>Vanani</em></h1>
+      <div class="hero-roles">
+        <span class="role-tag">Data Analyst</span>
+        <span class="role-divider">×</span>
+        <span class="role-tag">Power BI Expert</span>
+        <span class="role-divider">×</span>
+        <span class="role-tag">SQL Developer</span>
+      </div>
+      <p class="hero-bio">Transforming raw data into powerful business decisions.<br>M.Sc. Data Science · Berlin, Germany</p>
+      <div class="hero-cta">
+        <a href="C:\Users\Tanvi\OneDrive\resume portfolio\Tanvi_Final_Portfolio_v2\tanvi_portfolio\Tanvi_Vanani_CV_Final.pdf" target="_blank" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Download CV
+        </a>
+        <a href="#contact" class="btn-ghost">Get in Touch →</a>
+      </div>
+      <div class="hero-socials">
+        <a href="mailto:tanvivanani27@gmail.com" aria-label="Email">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/tanvi-vanani" target="_blank" aria-label="LinkedIn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+        <a href="https://github.com/tanvivanani" target="_blank" aria-label="GitHub">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+        <a href="tel:+919313651451" aria-label="Phone">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─────────────────────────────────────────── -->
+  <section id="about">
+    <div class="section-label">01 // about</div>
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <h2 class="section-title">Data-Driven<br><em>Decision Maker</em></h2>
+        <p>Hi, I'm Tanvi Vanani — a Data Science graduate student at Berlin, Germany, with hands-on industry experience in data analysis, Power BI dashboards, and database management. I thrive on turning messy, raw data into crystal-clear insights that drive business growth.</p>
+        <p>My journey spans building Power BI dashboards, writing complex SQL queries, automating reports, and creating Python-driven analytics pipelines — and now deepening my knowledge with a Master's in Data Science in Berlin.</p>
+      </div>
+      <div class="about-stats fade-in">
+        <div class="stat-card">
+          <div class="stat-number" data-target="1">0</div>
+          <div class="stat-label">Year<br>Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="3">0</div>
+          <div class="stat-label">Key<br>Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="3">0</div>
+          <div class="stat-label">Industry<br>Roles</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="5">0</div>
+          <div class="stat-label">Certifi-<br>cations</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─────────────────────────────────────────── -->
+  <section id="skills">
+    <div class="section-label">02 // skills</div>
+    <h2 class="section-title fade-in">My Tech<br><em>Arsenal</em></h2>
+    <div class="skills-grid fade-in">
+
+      <div class="skill-group">
+        <div class="skill-group-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+          Languages & Query
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>SQL / MySQL</span><span class="skill-pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Python</span><span class="skill-pct">72%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+          BI & Visualisation
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Power BI</span><span class="skill-pct">92%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Tableau</span><span class="skill-pct">65%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Google Analytics</span><span class="skill-pct">78%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+          </svg>
+          Data Tools
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Advanced Excel</span><span class="skill-pct">88%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Pivot Tables / Macros</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>ETL / Data Cleaning</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 8v4l3 3"/>
+          </svg>
+          Design & Cloud
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Figma</span><span class="skill-pct">70%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Cloud Fundamentals</span><span class="skill-pct">60%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Stored Proc / Triggers</span><span class="skill-pct">82%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── WORK EXPERIENCE ──────────────────────────────────── -->
+  <section id="experience">
+    <div class="section-label">03 // experience</div>
+    <h2 class="section-title fade-in">Work<br><em>Experience</em></h2>
+    <div class="timeline fade-in">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Jan 2025 — Jan 2026</div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <h3>Data Analyst</h3>
+            <span class="timeline-company">Anjali Labgrown Diamonds &amp; Jewellery</span>
+          </div>
+          <ul class="timeline-points">
+            <li>Created interactive <strong>Power BI dashboards</strong> to track sales trends and customer behaviour.</li>
+            <li>Automated daily Power BI reports, <strong>reducing manual effort</strong> and improving efficiency.</li>
+            <li>Performed data cleaning and analysis using <strong>Excel and SQL</strong> for accurate insights.</li>
+            <li>Utilised Advanced Excel functions (Pivot Tables, VLOOKUP, Macros) to streamline reporting.</li>
+          </ul>
+          <div class="timeline-tags">
+            <span>Power BI</span><span>SQL</span><span>Excel</span><span>Dashboards</span><span>Automation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot timeline-dot--intern"></div>
+        <div class="timeline-date">Apr 2024 — Sep 2024</div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <h3>Data Analyst Intern</h3>
+            <span class="timeline-company">SA Diamond</span>
+          </div>
+          <ul class="timeline-points">
+            <li>Created complex <strong>SQL queries</strong> for data extraction, transformation, and analysis.</li>
+            <li>Built interactive <strong>Power BI reports</strong> and dashboards for business decision insights.</li>
+            <li>Conducted statistical data analysis using <strong>Python and SQL</strong>.</li>
+            <li>Supported stakeholders with actionable insights to drive decisions.</li>
+          </ul>
+          <div class="timeline-tags">
+            <span>SQL</span><span>Power BI</span><span>Python</span><span>Analytics</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot timeline-dot--intern"></div>
+        <div class="timeline-date">Aug 2023 — Oct 2023</div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <h3>Junior Database Developer Intern</h3>
+            <span class="timeline-company">LaMinds</span>
+          </div>
+          <ul class="timeline-points">
+            <li>Learned and applied basic to advanced <strong>MySQL</strong> concepts.</li>
+            <li>Implemented an Online Shopping Database using triggers, stored procedures, and CTEs.</li>
+            <li>Solved practice queries on <strong>Bank Transactions</strong> and assisted senior on DB project.</li>
+          </ul>
+          <div class="timeline-tags">
+            <span>MySQL</span><span>Stored Procedures</span><span>Triggers</span><span>CTE</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── EDUCATION ─────────────────────────────────────── -->
+  <section id="education">
+    <div class="section-label">04 // education</div>
+    <h2 class="section-title fade-in">Academic<br><em>Background</em></h2>
+    <div class="timeline fade-in">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2025 — Present</div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <h3>M.Sc. Data Science</h3>
+            <span class="timeline-company">Arden University · Berlin, Germany</span>
+          </div>
+          <ul class="timeline-points">
+            <li>Pursuing advanced studies in <strong>Machine Learning, Deep Learning, and Big Data</strong> analytics.</li>
+            <li>Combining academic research with real-world industry experience in data analytics.</li>
+          </ul>
+          <div class="timeline-tags">
+            <span>Machine Learning</span><span>Deep Learning</span><span>Big Data</span><span>Berlin</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot timeline-dot--edu"></div>
+        <div class="timeline-date">2021 — 2025</div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <h3>B.E. Computer Engineering</h3>
+            <span class="timeline-company">Bhagwan Mahavir University, Surat · CGPA 8.67</span>
+          </div>
+          <ul class="timeline-points">
+            <li>Core focus: <strong>Data Science, Database Management, AI</strong> and Algorithms.</li>
+            <li>Achieved 1st place at AYAM, a university-wide technical event.</li>
+          </ul>
+          <div class="timeline-tags">
+            <span>Data Science</span><span>AI</span><span>Algorithms</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot timeline-dot--edu"></div>
+        <div class="timeline-date">2019 — 2021</div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <h3>HSC · CBSE</h3>
+            <span class="timeline-company">Radiant English Academy, Surat · 80.4%</span>
+          </div>
+          <div class="timeline-tags">
+            <span>CBSE</span><span>Science</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─────────────────────────────────────── -->
+  <section id="projects">
+    <div class="section-label">05 // projects</div>
+    <h2 class="section-title fade-in">Featured<br><em>Projects</em></h2>
+    <div class="projects-grid fade-in">
+
+      <!-- PROJECT 01: Vehicle Speed Detection -->
+      <div class="project-card">
+        <div class="project-num">01</div>
+        <div class="project-img-area">
+          <!-- Replace src with your actual project screenshot -->
+          <img src="project1.jpg" alt="Vehicle Speed Detection" class="project-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="project-svg-fallback">
+            <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+              <!-- Road background -->
+              <rect width="320" height="180" fill="#0e0e1a"/>
+              <rect x="0" y="110" width="320" height="70" fill="#1a1a2e"/>
+              <!-- Road markings -->
+              <rect x="0" y="130" width="320" height="4" fill="#2a2a3e"/>
+              <rect x="30" y="145" width="50" height="3" fill="#3a3050" rx="1"/>
+              <rect x="120" y="145" width="50" height="3" fill="#3a3050" rx="1"/>
+              <rect x="210" y="145" width="50" height="3" fill="#3a3050" rx="1"/>
+              <!-- Car body -->
+              <rect x="100" y="105" width="90" height="35" rx="6" fill="#2d2d4e"/>
+              <rect x="115" y="92" width="60" height="22" rx="5" fill="#252540"/>
+              <!-- Car wheels -->
+              <circle cx="122" cy="142" r="10" fill="#1a1a2e" stroke="#4a4a6a" stroke-width="2"/>
+              <circle cx="122" cy="142" r="5" fill="#2d2d4e"/>
+              <circle cx="168" cy="142" r="10" fill="#1a1a2e" stroke="#4a4a6a" stroke-width="2"/>
+              <circle cx="168" cy="142" r="5" fill="#2d2d4e"/>
+              <!-- Car headlights glow -->
+              <ellipse cx="190" cy="118" rx="12" ry="6" fill="#ffbe3d" opacity="0.25"/>
+              <rect x="186" y="114" width="8" height="8" rx="2" fill="#ffbe3d" opacity="0.9"/>
+              <!-- Detection bounding box -->
+              <rect x="93" y="85" width="108" height="70" rx="3" fill="none" stroke="#c084fc" stroke-width="2" stroke-dasharray="6,3"/>
+              <!-- Corner accents -->
+              <path d="M93,95 L93,85 L103,85" stroke="#c084fc" stroke-width="2.5" fill="none"/>
+              <path d="M191,85 L201,85 L201,95" stroke="#c084fc" stroke-width="2.5" fill="none"/>
+              <path d="M93,145 L93,155 L103,155" stroke="#c084fc" stroke-width="2.5" fill="none"/>
+              <path d="M191,155 L201,155 L201,145" stroke="#c084fc" stroke-width="2.5" fill="none"/>
+              <!-- Speed label -->
+              <rect x="105" y="60" width="80" height="22" rx="4" fill="#c084fc" opacity="0.9"/>
+              <text x="145" y="75" text-anchor="middle" font-family="monospace" font-size="11" fill="#fff" font-weight="bold">72 km/h  ⚡</text>
+              <!-- Speed line -->
+              <line x1="145" y1="82" x2="145" y2="86" stroke="#c084fc" stroke-width="1.5"/>
+              <!-- Data points / tracking -->
+              <circle cx="60" cy="120" r="3" fill="#ffbe3d" opacity="0.5"/>
+              <circle cx="240" cy="115" r="3" fill="#ffbe3d" opacity="0.5"/>
+              <circle cx="260" cy="122" r="2" fill="#ffbe3d" opacity="0.3"/>
+              <!-- FPS indicator -->
+              <text x="12" y="20" font-family="monospace" font-size="9" fill="#ffbe3d" opacity="0.8">● LIVE  30fps</text>
+              <text x="12" y="34" font-family="monospace" font-size="9" fill="#6e6a82">FRAME: 1247</text>
+              <!-- Confidence score -->
+              <text x="220" y="20" font-family="monospace" font-size="9" fill="#2dd4bf">CONF: 96.4%</text>
+            </svg>
+          </div>
+          <div class="project-img-overlay">
+            <span class="project-img-tag">Python · OpenCV · ML</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Vehicle Speed Detection</h3>
+          <p>Real-time vehicle speed estimation using Python and OpenCV. Tracks vehicles across video frames, calculates speed via pixel-to-distance calibration, and flags over-speeding — designed for traffic monitoring use cases.</p>
+          <div class="project-tags">
+            <span>Python</span><span>OpenCV</span><span>Computer Vision</span><span>NumPy</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-date">2025</div>
+            <a href="https://github.com/tanvivanani/Vehicle-Speed-Detection.git" target="_blank" class="project-gh-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 02: Online Shopping Database -->
+      <div class="project-card">
+        <div class="project-num">02</div>
+        <div class="project-img-area">
+          <img src="project2.jpg" alt="Online Shopping Database" class="project-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="project-svg-fallback">
+            <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+              <rect width="320" height="180" fill="#0e0e1a"/>
+              <!-- Central table -->
+              <rect x="115" y="60" width="90" height="65" rx="6" fill="#181828" stroke="#ffbe3d" stroke-width="1.5"/>
+              <rect x="115" y="60" width="90" height="18" rx="6" fill="#ffbe3d" opacity="0.85"/>
+              <text x="160" y="73" text-anchor="middle" font-family="monospace" font-size="9" fill="#0e0e1a" font-weight="bold">ORDERS</text>
+              <text x="125" y="90" font-family="monospace" font-size="7.5" fill="#6e6a82">order_id</text>
+              <text x="125" y="102" font-family="monospace" font-size="7.5" fill="#6e6a82">user_id</text>
+              <text x="125" y="114" font-family="monospace" font-size="7.5" fill="#6e6a82">product_id</text>
+              <text x="125" y="126" font-family="monospace" font-size="7.5" fill="#6e6a82">total</text>
+              <!-- Left table: USERS -->
+              <rect x="20" y="40" width="75" height="55" rx="5" fill="#181828" stroke="#c084fc" stroke-width="1.5"/>
+              <rect x="20" y="40" width="75" height="16" rx="5" fill="#c084fc" opacity="0.8"/>
+              <text x="57" y="51" text-anchor="middle" font-family="monospace" font-size="8" fill="#fff" font-weight="bold">USERS</text>
+              <text x="28" y="67" font-family="monospace" font-size="7" fill="#6e6a82">user_id  🔑</text>
+              <text x="28" y="78" font-family="monospace" font-size="7" fill="#6e6a82">name</text>
+              <text x="28" y="89" font-family="monospace" font-size="7" fill="#6e6a82">email</text>
+              <!-- Right table: PRODUCTS -->
+              <rect x="225" y="40" width="75" height="55" rx="5" fill="#181828" stroke="#2dd4bf" stroke-width="1.5"/>
+              <rect x="225" y="40" width="75" height="16" rx="5" fill="#2dd4bf" opacity="0.8"/>
+              <text x="262" y="51" text-anchor="middle" font-family="monospace" font-size="8" fill="#0e0e1a" font-weight="bold">PRODUCTS</text>
+              <text x="233" y="67" font-family="monospace" font-size="7" fill="#6e6a82">product_id 🔑</text>
+              <text x="233" y="78" font-family="monospace" font-size="7" fill="#6e6a82">name</text>
+              <text x="233" y="89" font-family="monospace" font-size="7" fill="#6e6a82">price</text>
+              <!-- Bottom table: CART -->
+              <rect x="115" y="145" width="90" height="25" rx="5" fill="#181828" stroke="#ffbe3d" stroke-width="1"/>
+              <rect x="115" y="145" width="90" height="12" rx="5" fill="#ffbe3d" opacity="0.5"/>
+              <text x="160" y="154" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#fff">CART ITEMS</text>
+              <!-- Connector lines -->
+              <line x1="95" y1="70" x2="115" y2="85" stroke="#c084fc" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.7"/>
+              <line x1="205" y1="70" x2="205" y2="85" stroke="#2dd4bf" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.7"/>
+              <line x1="160" y1="125" x2="160" y2="145" stroke="#ffbe3d" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.7"/>
+              <!-- Trigger label -->
+              <rect x="10" y="115" width="85" height="16" rx="3" fill="#181828" stroke="#ffbe3d" stroke-width="1" opacity="0.9"/>
+              <text x="52" y="126" text-anchor="middle" font-family="monospace" font-size="7" fill="#ffbe3d">⚡ TRIGGER: INSERT</text>
+              <!-- CTE label -->
+              <rect x="225" y="115" width="70" height="16" rx="3" fill="#181828" stroke="#2dd4bf" stroke-width="1" opacity="0.9"/>
+              <text x="260" y="126" text-anchor="middle" font-family="monospace" font-size="7" fill="#2dd4bf">WITH cte AS...</text>
+            </svg>
+          </div>
+          <div class="project-img-overlay">
+            <span class="project-img-tag">MySQL · SQL · Database</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Online Shopping Database</h3>
+          <p>Designed a full relational database with tables for users, products, orders, categories, and cart items. Linked tables with constraint keys, implemented triggers for direct insertions, updates, and deletions.</p>
+          <div class="project-tags">
+            <span>MySQL</span><span>Triggers</span><span>Stored Procedures</span><span>CTE</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-date">Sep 2023</div>
+            <span class="project-private-badge">Private Repo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 03: Paris Olympics Dashboard -->
+      <div class="project-card">
+        <div class="project-num">03</div>
+        <div class="project-img-area">
+          <img src="project3.jpg" alt="Paris 2024 Olympics Dashboard" class="project-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="project-svg-fallback">
+            <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+              <rect width="320" height="180" fill="#0e0e1a"/>
+              <!-- Header bar -->
+              <rect x="10" y="10" width="300" height="28" rx="5" fill="#181828" stroke="#ffbe3d" stroke-width="1"/>
+              <circle cx="28" cy="24" r="7" fill="#ffbe3d" opacity="0.9"/>
+              <text x="40" y="28" font-family="monospace" font-size="10" fill="#fff" font-weight="bold">Paris 2024 — Olympics Dashboard</text>
+              <text x="270" y="28" font-family="monospace" font-size="8" fill="#2dd4bf">LIVE ●</text>
+              <!-- Bar chart -->
+              <rect x="15" y="50" width="130" height="80" rx="5" fill="#181828" stroke="#2a2a3e" stroke-width="1"/>
+              <text x="80" y="63" text-anchor="middle" font-family="monospace" font-size="7" fill="#6e6a82">MEDALS BY COUNTRY</text>
+              <rect x="28" y="95" width="16" height="28" rx="2" fill="#ffbe3d" opacity="0.9"/>
+              <rect x="50" y="85" width="16" height="38" rx="2" fill="#c084fc" opacity="0.9"/>
+              <rect x="72" y="100" width="16" height="23" rx="2" fill="#2dd4bf" opacity="0.9"/>
+              <rect x="94" y="90" width="16" height="33" rx="2" fill="#ffbe3d" opacity="0.6"/>
+              <rect x="116" y="105" width="16" height="18" rx="2" fill="#c084fc" opacity="0.6"/>
+              <text x="36" y="131" text-anchor="middle" font-family="monospace" font-size="6" fill="#6e6a82">USA</text>
+              <text x="58" y="131" text-anchor="middle" font-family="monospace" font-size="6" fill="#6e6a82">CHN</text>
+              <text x="80" y="131" text-anchor="middle" font-family="monospace" font-size="6" fill="#6e6a82">GBR</text>
+              <text x="102" y="131" text-anchor="middle" font-family="monospace" font-size="6" fill="#6e6a82">AUS</text>
+              <text x="124" y="131" text-anchor="middle" font-family="monospace" font-size="6" fill="#6e6a82">FRA</text>
+              <!-- Donut chart -->
+              <circle cx="220" cy="95" r="35" fill="none" stroke="#1a1a2e" stroke-width="14"/>
+              <circle cx="220" cy="95" r="35" fill="none" stroke="#ffbe3d" stroke-width="14" stroke-dasharray="66 154" stroke-dashoffset="0" opacity="0.9"/>
+              <circle cx="220" cy="95" r="35" fill="none" stroke="#c084fc" stroke-width="14" stroke-dasharray="44 176" stroke-dashoffset="-66" opacity="0.9"/>
+              <circle cx="220" cy="95" r="35" fill="none" stroke="#2dd4bf" stroke-width="14" stroke-dasharray="44 176" stroke-dashoffset="-110" opacity="0.9"/>
+              <text x="220" y="91" text-anchor="middle" font-family="monospace" font-size="14" fill="#fff" font-weight="bold">329</text>
+              <text x="220" y="103" text-anchor="middle" font-family="monospace" font-size="7" fill="#6e6a82">events</text>
+              <!-- Stats row -->
+              <rect x="160" y="148" width="55" height="22" rx="4" fill="#181828" stroke="#ffbe3d" stroke-width="1"/>
+              <text x="187" y="163" text-anchor="middle" font-family="monospace" font-size="8" fill="#ffbe3d">🥇 126</text>
+              <rect x="222" y="148" width="55" height="22" rx="4" fill="#181828" stroke="#c084fc" stroke-width="1"/>
+              <text x="249" y="163" text-anchor="middle" font-family="monospace" font-size="8" fill="#c084fc">🥈  94</text>
+              <!-- Figma badge -->
+              <rect x="15" y="148" width="50" height="18" rx="3" fill="#181828" stroke="#2dd4bf" stroke-width="1"/>
+              <text x="40" y="160" text-anchor="middle" font-family="monospace" font-size="7" fill="#2dd4bf">✦ Figma UI</text>
+              <!-- Auto-update label -->
+              <rect x="70" y="148" width="75" height="18" rx="3" fill="#181828" stroke="#6e6a82" stroke-width="1"/>
+              <text x="107" y="160" text-anchor="middle" font-family="monospace" font-size="7" fill="#6e6a82">⟳ Auto-update</text>
+            </svg>
+          </div>
+          <div class="project-img-overlay">
+            <span class="project-img-tag">Python · Power BI · Figma</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Paris 2024 Olympics Dashboard</h3>
+          <p>Used Python to automate data extraction and cleaning for a Power BI dashboard. Designed the layout in Figma for a modern UI. Built multi-angle visualisations with auto-update capability throughout the event.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Power BI</span><span>Figma</span><span>Automation</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-date">Oct 2024</div>
+            <a href="https://github.com/tanvivanani/Paris-2024-Olympic-Dashboard.git" target="_blank" class="project-gh-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+    <!-- More projects banner -->
+    <div class="more-projects-banner fade-in">
+      <div class="more-projects-text">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        <span>Want to see more? All my projects are available on GitHub.</span>
+      </div>
+      <a href="https://github.com/tanvivanani" target="_blank" class="more-projects-btn">
+        Explore All Projects →
+      </a>
+    </div>
+
+  </section>
+
+  <!-- ─── CERTIFICATIONS ─────────────────────────────────── -->
+  <section id="certifications">
+    <div class="section-label">06 // certifications</div>
+    <h2 class="section-title fade-in">Credentials &amp;<br><em>Certifications</em></h2>
+    <div class="certs-grid fade-in">
+      <div class="cert-card">
+        <div class="cert-icon">GA</div>
+        <div class="cert-info">
+          <h4>Advanced Google Analytics</h4>
+          <span>Google Analytics Academy</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">TB</div>
+        <div class="cert-info">
+          <h4>Introduction to Tableau</h4>
+          <span>LearnTube</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">IBM</div>
+        <div class="cert-info">
+          <h4>Python 101 for Data Science</h4>
+          <span>IBM</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">☁</div>
+        <div class="cert-info">
+          <h4>Introduction to Cloud</h4>
+          <span>IBM</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">DS</div>
+        <div class="cert-info">
+          <h4>Data Science Workshop</h4>
+          <span>Prof. Vikas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ──────────────────────────────────────── -->
+  <section id="contact">
+    <div class="section-label">07 // contact</div>
+    <h2 class="section-title fade-in">Let's<br><em>Connect</em></h2>
+    <div class="contact-grid fade-in">
+      <div class="contact-text">
+        <p>I'm always open to data analyst roles, analytics projects, or collaborations. Let's talk data!</p>
+        <div class="contact-links">
+          <a href="mailto:tanvivanani27@gmail.com" class="contact-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            <div>
+              <div class="contact-card-label">Email</div>
+              <div class="contact-card-value">tanvivanani27@gmail.com</div>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/tanvi-vanani" target="_blank" class="contact-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            <div>
+              <div class="contact-card-label">LinkedIn</div>
+              <div class="contact-card-value">linkedin.com/in/tanvi-vanani</div>
+            </div>
+          </a>
+          <a href="https://github.com/tanvivanani" target="_blank" class="contact-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <div>
+              <div class="contact-card-label">GitHub</div>
+              <div class="contact-card-value">github.com/tanvivanani</div>
+            </div>
+          </a>
+          <a href="tel:+919313651451" class="contact-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <div>
+              <div class="contact-card-label">Phone</div>
+              <div class="contact-card-value">+49 15567 190481</div>
+            </div>
+          </a>
+          <div class="contact-card no-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <div>
+              <div class="contact-card-label">Location</div>
+              <div class="contact-card-value">Berlin, Germany</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-code">
+        <div class="code-window">
+          <div class="code-bar"><span></span><span></span><span></span></div>
+          <pre><code><span class="c-keyword">const</span> <span class="c-var">tanvi</span> = {
+  <span class="c-prop">role</span>:    <span class="c-str">"Data Analyst"</span>,
+  <span class="c-prop">stack</span>:   [<span class="c-str">"Power BI"</span>, <span class="c-str">"SQL"</span>,
+            <span class="c-str">"Python"</span>, <span class="c-str">"Excel"</span>],
+  <span class="c-prop">degree</span>:  <span class="c-str">"M.Sc. Data Science"</span>,
+  <span class="c-prop">city</span>:    <span class="c-str">"Berlin, Germany"</span>,
+  <span class="c-prop">github</span>:  <span class="c-str">"github.com/tanvivanani"</span>,
+  <span class="c-prop">linkedin</span>:<span class="c-str">"in/tanvi-vanani"</span>,
+
+  <span class="c-prop">connect</span>: <span class="c-keyword">async</span> () =&gt; {
+    <span class="c-keyword">await</span> <span class="c-fn">sendMessage</span>();
+    <span class="c-keyword">return</span> <span class="c-str">"Let&#39;s build!"</span>;
+  }
+};</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo"><span class="logo-bracket">[</span>TV<span class="logo-bracket">]</span></div>
+      <p>Designed &amp; Built by Tanvi Vanani · 2025</p>
+      <div class="footer-links">
+        <a href="#about">about</a>
+        <a href="#skills">skills</a>
+        <a href="#projects">projects</a>
+        <a href="#contact">contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
